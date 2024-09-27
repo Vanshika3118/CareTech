@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+
+  .container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+  }
+
+  .logo {
+    display: block;
+    margin: 0 auto 20px;
+    width: 150px;
+    height: 150px;
+    background-color: #0050d5;
+    border-radius: 50%;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .logo .heart {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    fill: white;
+  }
+
+  .logo .plus {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: 40%;
+    fill: white;
+  }
+
+  .btn {
+    background-color: #6399f0;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+    transition: background-color 0.3s;
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .btn:hover {
+    background-color: #0050d5;
+  }
+
+  .btn:active {
+    transform: translateY(2px);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  }
+
+  @media (max-width: 768px) {
+    .logo {
+      width: 120px;
+      height: 120px;
+    }
+
+    .btn {
+      padding: 12px 15px;
+      font-size: 0.9rem;
+    }
+
+    .container {
+      padding: 20px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .logo {
+      width: 100px;
+      height: 100px;
+    }
+
+    .btn {
+      padding: 10px 12px;
+      font-size: 0.8rem;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="logo">
+    <svg class="heart" viewBox="0 0 100 100">
+      <path d="M50,10 C77.6142375,10 95,27.3857625 95,50 C95,72.6142375 77.6142375,90 50,90 C22.3857625,90 5,72.6142375 5,50 C5,27.3857625 22.3857625,10 50,10 Z" />
+    </svg>
+    <svg class="plus" viewBox="0 0 100 100">
+      <path d="M50,25 L50,75" />
+      <path d="M25,50 L75,50" />
+    </svg>
+  </div>
+  <h1>CARE TECH</h1>
+  <button class="btn" onclick="window.location.href = 'login.html'">Log in</button>
+  <button class="btn" onclick="window.location.href = 'signup.html'">Create Account</button>
+</div>
+</body>
+</html>

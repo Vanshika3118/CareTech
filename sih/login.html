@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #6399f0;
+            border: none;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0050d5;
+        }
+
+        .error {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Login Page</h1>
+        <label for="inputID">Enter ID:</label>
+        <input type="text" id="inputID" name="inputID" required>
+        <button onclick="login()">Login</button>
+        <div id="errorDisplay" class="error"></div>
+    </div>
+
+    <script>
+        function login() {
+            const storedID = localStorage.getItem('generatedID');
+            const inputID = document.getElementById('inputID').value;
+            const errorDisplay = document.getElementById('errorDisplay');
+
+            if (inputID === storedID) {
+                // Redirect to the next page if ID matches
+                window.location.href = 'patientDetails.html';
+            } else {
+                // Display error message if ID does not match
+                errorDisplay.innerText = 'Invalid ID. Please try again.';
+            }
+        }
+    </script>
+</body>
+</html>
