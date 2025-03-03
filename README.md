@@ -26,7 +26,7 @@ Future Backend Integration: Firebase / Node.js
 🔹 Backend Integration for data storage
 🔹 AI-based health insights and alerts
 
-#Screenshot 
+#Screenshot 📸 
 ![Screenshot 2025-02-27 235859](https://github.com/user-attachments/assets/ab963b10-4908-4edb-b5e1-79fb63098e53)
 
 #💡 This is the first phase of CareTech, focusing on UI development. Future updates will include IoT and backend integration.
